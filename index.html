@@ -17,7 +17,7 @@
             <div class="col-span-3 text-center space-y-3 ard card-border bg-base-100 shadow-2xl card-body">
                 <h1 class="font-bold">Categories</h1>
                 <div class="space-y-3">
-                    <button class="btn btn-success w-full">All Trees</button>
+                    <button onclick="clickAllBtn('allTreesBtn')" id="allTreesBtn" class="btn btn-success w-full">All Trees</button>
                     <div id="categories-container" class="space-y-3">
 
                     </div>
@@ -25,6 +25,9 @@
             </div>
             <div class="col-span-7">
                 <div id="trees-container" class="grid grid-cols-3 gap-5">
+                </div>
+                <div id="loadingCategories" class="hidden justify-center items-center">
+                    <span class="loading loading-dots loading-xl"></span>
                 </div>
             </div>
             <div class="col-span-2">
