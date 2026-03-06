@@ -17,7 +17,8 @@
             <div class="col-span-3 text-center space-y-3 ard card-border bg-base-100 shadow-2xl card-body">
                 <h1 class="font-bold">Categories</h1>
                 <div class="space-y-3">
-                    <button onclick="clickAllBtn('allTreesBtn')" id="allTreesBtn" class="btn btn-success w-full">All Trees</button>
+                    <button onclick="clickAllBtn('allTreesBtn')" id="allTreesBtn" class="btn btn-success w-full">All
+                        Trees</button>
                     <div id="categories-container" class="space-y-3">
 
                     </div>
@@ -34,6 +35,30 @@
                 Cart
             </div>
         </section>
+        
+        <dialog id="details-modal" class="modal">
+            <div class="modal-box">
+                <div class=" flex justify-between items-center">
+                    <h3 id="details-title"  class="font-bold text-2xl mb-2"></h3>
+                    <div onclick="detailsModal.close()" id="closeModal" class="px-4 py-2 rounded-full hover:bg-gray-200 font-semibold cursor-pointer">X</div>
+                </div>
+                <img id="details-image" src="" alt="" class="h-[64vh] w-full object-cover mb-2" >
+                <div class="flex gap-4 items-center mb-2">
+                <p>Category: </p>
+                <div id="details-badge" class="badge badge-outline badge-success"></div>
+                </div>
+                <p id="details-description" class="mb-2"></p>
+                <div class="flex justify-between items-center">
+                    <h2 id="details-price" class=" text-xl text-[#416d51] font-bold">$500</h2>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn">Close</button>
+                        <button class="btn btn-success text-white ">Cart</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </dialog>
     </main>
     <script src="./script.js"></script>
 </body>
